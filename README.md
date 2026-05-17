@@ -34,7 +34,7 @@ Geleneksel karar destek sistemleri sadece geçmiş veriyi raporlarken (Reaktif),
 Era, basit bir yapay zeka chatbot arayüzünün çok ötesinde, tam entegre bir **Lojistik Operasyon Hub'ı**dır:
 
 ### 1. 🌅 Morning Brief (Dinamik Sabah Özeti)
-Yönetici sisteme giriş yaptığında, AI tarafından üretilmiş ve doğrudan ilgili yöneticiye hitap eden (örn: *"Günaydın Ahmet Bey..."*), o günkü operasyonel risk puanını özetleyen ve alınması gereken en kritik 2 proaktif aksiyonu sunan doğal dilde yazılmış dinamik bir karşılama metni.
+ o günkü operasyonel risk puanını özetleyen ve alınması gereken en kritik 2 proaktif aksiyonu sunan doğal dilde yazılmış dinamik bir karşılama metni.
 
 ### 2. 💬 Era-Co Chat & Omni Search (Doğal Dil Arama Motoru)
 Statik SQL veya if-else sorguları yerine, tamamen canlı envanter ve rota verisiyle beslenmiş (Context Injection) yapay zeka destekli arama çubuğu. 
