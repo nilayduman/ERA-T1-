@@ -23,7 +23,7 @@ Geleneksel karar destek sistemleri sadece geçmiş veriyi raporlarken (Reaktif),
 | Tema Kodu | Tema Başlığı | Era Platformundaki Karşılığı ve Çözüm Odakları |
 | :---: | :--- | :--- |
 | **A1** | **Verimlilik & Maliyet Optimizasyonu** | Stok devir hızını optimize eder. Depolar arası gereksiz transferleri engeller, lojistik durak sürelerini kısaltarak yakıt ve zaman tasarrufu sağlar. |
-| **B2** | **Kamuda AI Dönüşümü** | Afet yönetim merkezleri, kamu depoları (örn: Kızılay, AFAD, Devlet Malzeme Ofisi) ve dağıtım ağlarının yapay zeka ile dinamik, esnek ve şeffaf koordinasyonu. |
+| **B2** | **Kamuda AI Dönüşümü** | Ptt gibi dağıtım ağlarının yapay zeka ile dinamik, esnek ve şeffaf koordinasyonu. |
 | **D4** | **Zaman Serisi & Talep Analizi** | Günlük talep trendlerini ve depo kurallarını (Min/Max envanter limitleri) zaman serisi mantığıyla kıyaslayarak envanter tükenme sürelerini milisaniyeler içinde simüle eder. |
 | **D5** | **Anomali Tespiti & Erken Uyarı** | Teslimat rotalarında hedef sürelerin aşılması (trafik/durak anomalileri) ve depolardaki kritik stok seviyelerini dinamik kurallar çerçevesinde anlık anomali olarak yakalar. |
 
