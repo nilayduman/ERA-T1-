@@ -1,4 +1,4 @@
-# Era — AI-Powered Logistics Optimization
+# Era — AI Powered Logistics Optimization
 
 Lojistik operasyonlarındaki stok ve rota darboğazlarını AI ile tespit edip optimize eden web uygulaması.
 
@@ -26,7 +26,6 @@ Lojistik operasyonlarındaki stok ve rota darboğazlarını AI ile tespit edip o
 cd backend
 pip install -r requirements.txt
 cp .env.example .env
-# .env dosyasına NVIDIA_API_KEY ekle
 python main.py
 ```
 
