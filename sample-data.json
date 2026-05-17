@@ -1,0 +1,239 @@
+{
+  "stock": [
+    {
+      "product_id": "Tıbbi Malzeme (Aşı/Serum)",
+      "sku": "SKU-MED-COV-992",
+      "category": "Soğuk Zincir Sağlık",
+      "warehouse": "İstanbul Merkez Depo",
+      "qty": 12,
+      "daily_demand": 5,
+      "unit": "Palet",
+      "unit_cost_try": 12500,
+      "selling_price_try": 28000,
+      "storage_condition": "Soğuk Zincir (-18°C / -25°C)",
+      "lead_time_days": 2,
+      "safety_stock_level": 15,
+      "supplier": "Biontech TR Dağıtım",
+      "coords": {
+        "x": 18,
+        "y": 25
+      }
+    },
+    {
+      "product_id": "Elektronik Mikroçip (Otomotiv)",
+      "sku": "SKU-ELC-SEM-104",
+      "category": "Yarı İletken / Teknoloji",
+      "warehouse": "İzmir Dağıtım Hub",
+      "qty": 200,
+      "daily_demand": 8,
+      "unit": "Koli",
+      "unit_cost_try": 4500,
+      "selling_price_try": 9800,
+      "storage_condition": "Nem Kontrollü Kuru Depo (RH < 40%)",
+      "lead_time_days": 14,
+      "safety_stock_level": 50,
+      "supplier": "TSMC Europe",
+      "coords": {
+        "x": 10,
+        "y": 55
+      }
+    },
+    {
+      "product_id": "Endüstriyel Türbin Yedek Parçası",
+      "sku": "SKU-IND-TURB-55",
+      "category": "Ağır Sanayi Ekipmanı",
+      "warehouse": "Erzurum Doğu Depo",
+      "qty": 5,
+      "daily_demand": 3,
+      "unit": "Adet",
+      "unit_cost_try": 85000,
+      "selling_price_try": 145000,
+      "storage_condition": "Standart Kuru Depo",
+      "lead_time_days": 21,
+      "safety_stock_level": 8,
+      "supplier": "Siemens Energy",
+      "coords": {
+        "x": 82,
+        "y": 45
+      }
+    },
+    {
+      "product_id": "Tekstil Mamulü (Premium)",
+      "sku": "SKU-TEX-FAB-773",
+      "category": "Hazır Giyim Ham Madde",
+      "warehouse": "Ankara Bölge Hub",
+      "qty": 150,
+      "daily_demand": 12,
+      "unit": "Rulo",
+      "unit_cost_try": 1200,
+      "selling_price_try": 3500,
+      "storage_condition": "Standart Kuru Depo",
+      "lead_time_days": 5,
+      "safety_stock_level": 30,
+      "supplier": "Sanko Tekstil",
+      "coords": {
+        "x": 45,
+        "y": 42
+      }
+    },
+    {
+      "product_id": "Dondurulmuş Gıda Kolisi (Superfresh)",
+      "sku": "SKU-FOD-FRZ-884",
+      "category": "Hızlı Tüketim Gıda",
+      "warehouse": "Samsun Kuzey Lojistik",
+      "qty": 18,
+      "daily_demand": 10,
+      "unit": "Koli",
+      "unit_cost_try": 850,
+      "selling_price_try": 1850,
+      "storage_condition": "Derin Dondurucu (-18°C)",
+      "lead_time_days": 3,
+      "safety_stock_level": 40,
+      "supplier": "Kerevitaş A.Ş.",
+      "coords": {
+        "x": 58,
+        "y": 20
+      }
+    },
+    {
+      "product_id": "Akıllı Tarım Sulama Aletleri",
+      "sku": "SKU-AGR-IRR-003",
+      "category": "Tarım Teknolojileri",
+      "warehouse": "Adana Güney Lojistik",
+      "qty": 90,
+      "daily_demand": 8,
+      "unit": "Set",
+      "unit_cost_try": 3100,
+      "selling_price_try": 6800,
+      "storage_condition": "Açık/Kapalı Karma Depo",
+      "lead_time_days": 7,
+      "safety_stock_level": 25,
+      "supplier": "Netafim TR",
+      "coords": {
+        "x": 54,
+        "y": 68
+      }
+    }
+  ],
+  "routes": [
+    {
+      "route_id": "R-IST-ANK",
+      "from_city": "İstanbul Merkez Depo",
+      "to_city": "Ankara Bölge Hub",
+      "vehicle_type": "Frigorifik Tır (Soğutmalı)",
+      "driver_name": "Mustafa Yılmaz",
+      "stops": 8,
+      "distance_km": 450,
+      "avg_time_hours": 5.8,
+      "fuel_cost_try": 6800,
+      "toll_cost_try": 1250,
+      "delay_risk_reason": "Kocaeli/Otoban yoğun dur-kalk trafiği ve yüksek durak sayısı",
+      "transit_status": "Yolda",
+      "from_coords": {
+        "x": 18,
+        "y": 25
+      },
+      "to_coords": {
+        "x": 45,
+        "y": 42
+      }
+    },
+    {
+      "route_id": "R-IZM-IST",
+      "from_city": "İzmir Dağıtım Hub",
+      "to_city": "İstanbul Merkez Depo",
+      "vehicle_type": "Standart Tenteli Tır",
+      "driver_name": "Ahmet Kaya",
+      "stops": 3,
+      "distance_km": 330,
+      "avg_time_hours": 3.2,
+      "fuel_cost_try": 4900,
+      "toll_cost_try": 1850,
+      "delay_risk_reason": "Osmangazi Köprüsü gişe geçiş yoğunluğu",
+      "transit_status": "Transit",
+      "from_coords": {
+        "x": 10,
+        "y": 55
+      },
+      "to_coords": {
+        "x": 18,
+        "y": 25
+      }
+    },
+    {
+      "route_id": "R-SAM-ANK",
+      "from_city": "Samsun Kuzey Lojistik",
+      "to_city": "Ankara Bölge Hub",
+      "vehicle_type": "İzotermik Kamyon",
+      "driver_name": "Can Arslan",
+      "stops": 4,
+      "distance_km": 420,
+      "avg_time_hours": 4.8,
+      "fuel_cost_try": 5200,
+      "toll_cost_try": 0,
+      "delay_risk_reason": "Karadeniz geçişi virajlı dağ yolları ve hava muhalefeti",
+      "transit_status": "Beklemede",
+      "from_coords": {
+        "x": 58,
+        "y": 20
+      },
+      "to_coords": {
+        "x": 45,
+        "y": 42
+      }
+    },
+    {
+      "route_id": "R-AD-ANK",
+      "from_city": "Adana Güney Lojistik",
+      "to_city": "Ankara Bölge Hub",
+      "vehicle_type": "10 Teker Standart Kamyon",
+      "driver_name": "Mehmet Demir",
+      "stops": 2,
+      "distance_km": 490,
+      "avg_time_hours": 3.4,
+      "fuel_cost_try": 5600,
+      "toll_cost_try": 450,
+      "delay_risk_reason": "Pozantı geçişi ağır vasıta yoğunluğu",
+      "transit_status": "Transit",
+      "from_coords": {
+        "x": 54,
+        "y": 68
+      },
+      "to_coords": {
+        "x": 45,
+        "y": 42
+      }
+    },
+    {
+      "route_id": "R-ERZ-ANK",
+      "from_city": "Erzurum Doğu Depo",
+      "to_city": "Ankara Bölge Hub",
+      "vehicle_type": "Frigorifik Ağır Ticari Tır",
+      "driver_name": "Selim Yıldız",
+      "stops": 9,
+      "distance_km": 870,
+      "avg_time_hours": 10.5,
+      "fuel_cost_try": 12800,
+      "toll_cost_try": 200,
+      "delay_risk_reason": "Doğu Anadolu kış şartları, buzlanma ve yüksek geçit rakımları",
+      "transit_status": "Yolda",
+      "from_coords": {
+        "x": 82,
+        "y": 45
+      },
+      "to_coords": {
+        "x": 45,
+        "y": 42
+      }
+    }
+  ],
+  "company_rules": {
+    "min_stock_days": 3,
+    "max_stock_days": 14,
+    "target_delivery_hours": 3.5,
+    "cold_chain_temp_max_celsius": -18,
+    "max_driver_driving_hours_per_day": 9,
+    "delay_penalty_per_hour_try": 1500,
+    "carbon_emission_tax_threshold_kg": 250
+  }
+}

@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ghibli-sky: #B2E2F2;
+  --ghibli-meadow: #A8C69F;
+  --ghibli-paper: #FDFCF0;
+  --ghibli-accent: #E5B3BB; /* Dusty Rose instead of Orange */
+  --ghibli-sage: #B7D5AC;
+  --ghibli-navy: #457B9D;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-[#2F4F4F] antialiased bg-[#FDFCF0];
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-[1.5rem] bg-[#7EB2AC] px-8 py-3.5 text-sm font-bold text-white transition-all hover:bg-[#689B96] hover:scale-105 active:scale-95 shadow-[0_4px_0_#568580];
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-[1.5rem] border-2 border-[#7EB2AC] bg-white px-8 py-3.5 text-sm font-bold text-[#7EB2AC] transition-all hover:bg-[#F0F9F8] hover:scale-105 active:scale-95;
+  }
+
+  .section-label {
+    @apply text-[10px] font-bold uppercase tracking-[0.2em] text-[#689B96] bg-[#7EB2AC]/10 px-4 py-1.5 rounded-full inline-block;
+  }
+  
+  .ghibli-card {
+    @apply rounded-[2.5rem] border-[3px] border-white bg-white/70 backdrop-blur-sm p-8 shadow-[0_15px_35px_rgba(126,178,172,0.1)] transition-all hover:-translate-y-2 hover:bg-white;
+  }
+
+  .ghibli-border {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(1deg); }
+}
+
+@keyframes sway {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+}
+
+.float-anim {
+  animation: float 6s ease-in-out infinite;
+}
+
+.sway-anim {
+  animation: sway 4s ease-in-out infinite;
+}
+
+.bg-ghibli-gradient {
+  background: linear-gradient(180deg, #B2E2F2 0%, #E2F1F8 40%, #FDFCF0 100%);
+}
+
+.paper-texture {
+  background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+}
+
+/* Train Loading Animations */
+@keyframes train-move {
+  0% { transform: translateX(-150%); }
+  100% { transform: translateX(500%); }
+}
+
+@keyframes wheel-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes smoke-fade {
+  0% { transform: translateY(0) scale(1); opacity: 0.8; }
+  100% { transform: translateY(-20px) scale(2); opacity: 0; }
+}
+
+.train {
+  animation: train-move 5s linear infinite;
+}
+
+.wheel {
+  animation: wheel-rotate 0.6s linear infinite;
+}
+
+.smoke {
+  animation: smoke-fade 1.2s ease-out infinite;
+}

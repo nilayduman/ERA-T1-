@@ -1,0 +1,32 @@
+JÜRİ VE AI MÜHENDİSLERİ İÇİN MÜLAKAT HAZIRLIK REHBERİ
+
+Bu dosya, projenizi jüriye sunarken özellikle teknik ekipten (AI/Software Engineer) gelebilecek sorulara karşı sizi hazırlamak için oluşturulmuştur.
+
+1. PROJENİN TEMEL MİMARİSİ NEDİR?
+- Soru: "Sistemin arka planı nasıl çalışıyor, hangi teknolojileri kullandınız?"
+- Cevap: "Frontend tarafında modern, hızlı ve reaktif bir UI sunmak için React (Vite) ve Tailwind CSS kullandık. Kullanıcı deneyimini artırmak için modern animasyonlar ekledik. Backend tarafında ise yüksek performanslı, asenkron yapısıyla bilinen Python FastAPI'ı tercih ettik. Veritabanı olarak SQLite (era.db) kullanıyoruz. AI motoru olarak ise NVIDIA NIM API üzerinden Llama-3.3-70B modelini entegre ettik."
+
+2. AI ENTEGRASYONU NASIL ÇALIŞIYOR? (ÖNEMLİ)
+- Soru: "Yapay zeka analizini sisteme nasıl entegre ettiniz? RAG (Retrieval-Augmented Generation) veya Fine-tuning var mı?"
+- Cevap: "Şu anki mimaride 'Zero-shot Prompt Engineering' ve 'Structured JSON Output' tekniklerini kullanıyoruz. Backend'deki 'ai_service.py' dosyasında, lojistik verilerimiz (stok durumları, rotalar, teslimat süreleri) dinamik bir JSON formatına dönüştürülüyor ve sistem promptuna yedirilerek (Context Injection) Llama-3 modeline gönderiliyor. Modelden karmaşık metinler yerine doğrudan ayrıştırılabilir (parse edilebilir) yapısal bir JSON objesi dönmesini istiyoruz (use_json_mode=True). Böylece dönen özetleri, risk seviyelerini ve önerilen proaktif aksiyonları doğrudan arayüzde component'ler halinde gösterebiliyoruz."
+
+3. OMNI-SEARCH (ERA-CO CHAT) NASIL ÇALIŞIYOR?
+- Soru: "Aşağıdaki arama çubuğu/chat nasıl çalışıyor? Sadece if-else mi yoksa gerçekten AI mı?"
+- Cevap: "Kullanıcının doğal dilde yazdığı sorular (örn: 'Erzurum deposunda durum ne?'), anlık stok ve rota verileriyle birlikte paketlenerek LLM'e gönderiliyor. Model, bu bağlamı (context) anlayarak yöneticinin sorusuna doğal, anlık ve analitik bir cevap üretiyor. Yani statik bir if-else değil, tamamen veriye dayalı dinamik bir üretken zeka (Generative AI) çalışıyor."
+
+4. LLM HALÜSİNASYONLARINI (HALUCINATION) NASIL ENGELLİYORSUNUZ?
+- Soru: "Dil modelleri uydurmaya meyillidir. Modelin yanlış aksiyon önermesini nasıl engelliyorsunuz?"
+- Cevap: 
+  1. Strict Prompting: Sisteme kesin kurallar verdik (örn: "SADECE geçerli JSON döndür").
+  2. Context Window: LLM'in dışarıdan bilgi uydurmaması için ona 'Şirket Kuralları' (minimum stok günleri, hedef teslimat saatleri vb.) adında somut kısıtlamalar gönderiyoruz.
+  3. Güvenli Ayrıştırma (Safe Parsing): Dönen JSON'u Regex ile temizleyerek ('_repair_json' fonksiyonu) sisteme alıyoruz. Model JSON yapısını bozarsa veya API cevap vermezse diye '_fallback_suggestions' metodunu yazdık. Bu sayede API çökse bile sistem kendi deterministik algoritmasıyla durum tespiti yapıp çalışmaya devam edebiliyor. Bu operasyonel süreklilik için kritik bir mühendislik savunmasıdır.
+
+5. PDF İNDİRME VE AKSİYON UYGULAMA (ACTIONABLE AI)
+- Soru: "AI'ın önerdiği aksiyonlar sadece birer metin tavsiyesi mi, yoksa sisteme bir etkisi var mı?"
+- Cevap: "Era sadece pasif bir analiz aracı değil, 'Agentic' (Otonom) bir asistan. Kullanıcı bir AI önerisine 'Uygula' dediğinde, AI tarafından üretilen aksiyon adımları API aracılığıyla sistemde işleniyor, simüle ediliyor ve durum 'Uygulandı'ya çekilerek WMS/ERP sistemleriyle senkronize edilmiş gibi bir log bırakılıyor. Alınan bu kararlar 'html2pdf.js' ile yöneticiler tarafından kurumsal bir PDF raporuna dönüştürülebiliyor."
+
+6. GELECEK VİZYONU (Eğer sorarlarsa)
+- Soru: "Bu projeyi daha ileri taşımak isterseniz ne yapardınız?"
+- Cevap: "Şu anki yapı 'Human-in-the-loop' yani insan onaylı AI şeklinde çalışıyor. Gelecekte, modelin güvenilirliği sahada kanıtlandığında bunu 'Full Autonomous Agent' (Tam Otonom Ajan) seviyesine çıkarmayı, yani stok krizlerinde veya rota sorunlarında hiç insan onayı beklemeden API üzerinden dış sistemlere (kargo firmaları vb.) istek atan uçtan uca bir sistem yapmayı hedefliyoruz."
+
+Özetle Jüriye Vermeniz Gereken Mesaj: "Biz burada sadece ChatGPT'ye API isteği atmadık; dönen veriyi formatladık, hata kontrol (fallback) mekanizması kurduk ve AI'ın ürettiği fikirleri butona tıklanarak 'uygulanabilir (actionable)' ve 'raporlanabilir (pdf)' bir operasyon yönetimi aracına dönüştürdük."
