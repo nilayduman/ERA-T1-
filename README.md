@@ -1,4 +1,4 @@
-Era — AI-Powered Enterprise Logistics Optimization Platform
+# Era — AI-Powered Enterprise Logistics Optimization Platform
 
 <p align="center">
   <img src="https://img.shields.io/badge/AI-Agentic%20Logistics-blueviolet?style=for-the-badge&logo=openai" alt="AI Agentic Logistics" />
@@ -10,201 +10,212 @@ Era — AI-Powered Enterprise Logistics Optimization Platform
 
 ---
 
-## 🌟 Proje Özeti / Executive Summary
+## 🌟 Executive Summary
 
-**Era**, modern tedarik zinciri ve lojistik operasyonlarında sıkça karşılaşılan **envanter (stok) darboğazlarını** ve **sevkiyat (rota) verimsizliklerini** üretken yapay zeka (Generative AI) gücüyle anlık olarak tespit eden, optimize eden ve **aksiyon alınabilir (actionable)** çözümler sunan uçtan uca akıllı bir operasyon yönetim platformudur. 
+**Era** is an AI-powered logistics operations platform designed to address **inventory bottlenecks** and **shipment inefficiencies** commonly encountered in modern supply chain and logistics operations.
 
-Geleneksel karar destek sistemleri sadece geçmiş veriyi raporlarken (Reaktif), **Era** entegre yapay zeka copilot'ı ile geleceğe yönelik risk tahmini yapar ve tek tıkla WMS/ERP sistemlerine işlenebilecek proaktif aksiyonlar önerir (Proaktif & Ajan Yapılı).
+While traditional decision-support systems only report historical data (reactive), **Era** uses its integrated AI copilot to predict future risks and send approved decisions to WMS/ERP systems with a single click.
 
 ---
 
-## 🎯 Hackathon Temaları ve Çözüm Uyum Matrisi
+## 🎯 Hackathon Themes and Solution Alignment Matrix
 
-| Tema Kodu | Tema Başlığı | Era Platformundaki Karşılığı ve Çözüm Odakları |
+| Theme Code | Theme | How It Is Addressed by the Era Platform |
 | :---: | :--- | :--- |
-| **A1** | **Verimlilik & Maliyet Optimizasyonu** | Stok devir hızını optimize eder. Depolar arası gereksiz transferleri engeller, lojistik durak sürelerini kısaltarak yakıt ve zaman tasarrufu sağlar. |
-| **B2** | **Kamuda AI Dönüşümü** | Ptt gibi dağıtım ağlarının yapay zeka ile dinamik, esnek ve şeffaf koordinasyonu. |
-| **D4** | **Zaman Serisi & Talep Analizi** | Günlük talep trendlerini ve depo kurallarını (Min/Max envanter limitleri) zaman serisi mantığıyla kıyaslayarak envanter tükenme sürelerini milisaniyeler içinde simüle eder. |
-| **D5** | **Anomali Tespiti & Erken Uyarı** | Teslimat rotalarında hedef sürelerin aşılması (trafik/durak anomalileri) ve depolardaki kritik stok seviyelerini dinamik kurallar çerçevesinde anlık anomali olarak yakalar. |
+| **A1** | **Efficiency & Cost Optimization** | Optimizes inventory turnover, prevents unnecessary transfers between warehouses, and saves fuel and time by reducing logistics stop durations. |
+| **B2** | **AI Transformation in the Public Sector** | Enables dynamic, flexible, and transparent AI-powered coordination of distribution networks such as PTT. |
+| **D4** | **Time Series & Demand Analysis** | Compares daily demand trends with warehouse rules (minimum/maximum inventory limits) to estimate inventory depletion times. |
+| **D5** | **Anomaly Detection & Early Warning** | Detects delivery routes exceeding target times (traffic/stop anomalies) and critical warehouse stock levels using dynamic rules. |
 
 ---
 
-## 🛠️ Temel Yetenekler ve Özellikler (Core Features)
+## 🛠️ Core Capabilities and Features
 
-Era, basit bir yapay zeka chatbot arayüzünün çok ötesinde, tam entegre bir **Lojistik Operasyon Hub'ı**dır:
+Era is much more than a basic AI chatbot interface; it is a fully integrated **Logistics Operations Hub**:
 
-### 1. 🌅 Morning Brief (Dinamik Sabah Özeti)
- o günkü operasyonel risk puanını özetleyen ve alınması gereken en kritik 2 proaktif aksiyonu sunan doğal dilde yazılmış dinamik bir karşılama metni.
+### 1. 🌅 Morning Brief (Dynamic Morning Summary)
 
-### 2. 💬 Era-Co Chat & Omni Search (Doğal Dil Arama Motoru)
-Statik SQL veya if-else sorguları yerine, tamamen canlı envanter ve rota verisiyle beslenmiş (Context Injection) yapay zeka destekli arama çubuğu. 
-* *Örn Sorgu:* *"Erzurum deposundaki yedek parça durumumuz nedir?"* veya *"Maliyet tasarrufu potansiyelimiz ne kadar?"* sorularına anlık, analitik ve doğru yanıtlar üretir.
+A dynamic natural-language welcome message that summarizes the day's operational risk score and presents the two most critical proactive actions that should be taken.
 
-### 3. ⚡ Actionable AI & Proactive Alerts (Aksiyon Alabilir Öneriler)
-Yapay zekanın ürettiği kararlar sadece statik birer tavsiye olarak kalmaz. Arayüzdeki **"Uygula" (Apply)** butonuna tıklandığında:
-* Karar API üzerinden işlenir.
-* Veritabanında (WMS/ERP simülasyonu) ilgili stok transferleri veya rota düzenlemeleri güncellenir.
-* Durum **"Uygulandı"** olarak işaretlenerek sisteme operasyonel bir iz (audit log) bırakılır.
+### 2. 💬 Era-Co Chat & Omni Search (Natural-Language Search Engine)
 
-### 4. 🔀 Operasyonel Yol Haritası (Execution Roadmap)
-Bir AI önerisi onaylandığında, arka planda çalışan süreçlerin (API çağrıları, WMS senkronizasyonu, RLHF geri bildirim güncellemeleri ve veritabanı yazımları) anlık durumunu görselleştiren step-by-step bir süreç takip hattı (Roadmap). Bu sayede yapay zekaya duyulan güven ve operasyonel şeffaflık maksimize edilir.
+An AI-powered search bar supplied with live inventory and route data through context injection, rather than relying on static SQL or if/else queries.
 
-### 5. 📄 Tek Tıkla PDF İhracı (Enterprise Reporting)
-Tüm AI analiz sonuçları, sabah brifingi, anomali raporları ve uygulanan operasyonel kararlar `html2pdf.js` kütüphanesi sayesinde tek tıkla kurumsal ve şık bir PDF raporuna dönüştürülüp indirilebilir.
+* *Example queries:* *"What is the status of spare parts at the Erzurum warehouse?"* or *"How much cost-saving potential do we have?"* The system produces immediate, analytical, and accurate answers.
 
-### 6. 🚆 Train Loading & Lojistik Animasyonları
-Veri yükleme, analiz etme veya JSON yükleme esnasında kullanıcının sıkılmasını engelleyen, lojistik temasına uygun, custom tasarlanmış tren yükleme animasyonu.
+### 3. ⚡ Actionable AI & Proactive Alerts
+
+AI-generated decisions do not remain static recommendations. When the **Apply** button in the interface is clicked:
+
+* The decision is processed through the API.
+* Relevant inventory transfers or route adjustments are updated in the database (the WMS/ERP simulation).
+* The decision is marked as **Applied**, leaving an operational trace in the system as an audit log.
+
+### 4. 🔀 Operational Execution Roadmap
+
+When an AI recommendation is approved, the interface visualizes the real-time status of background processes, including API calls, WMS synchronization, RLHF feedback updates, and database writes.
+
+### 5. 📄 One-Click PDF Export (Enterprise Reporting)
+
+All AI analysis results, the morning briefing, anomaly reports, and applied operational decisions can be converted into a polished enterprise PDF report with a single click using the `html2pdf.js` library.
+
+### 6. 🚆 Train Loading & Logistics Animations
+
+A custom-designed train-loading animation, aligned with the logistics theme, keeps users engaged while data is loading, being analyzed, or uploaded as JSON.
 
 ---
 
-## 🏗️ Sistem Mimarisi & Veri Akışı (Architecture)
+## 🏗️ System Architecture & Data Flow
 
-Era, modern mikrosistem mimarisine ve **Human-in-the-Loop** (İnsan Onaylı Otonom Yapı) prensibine dayanır:
+Era is based on a modern microsystem architecture and the **Human-in-the-Loop** principle:
 
 ```mermaid
 graph TD
-    A[React Frontend - Vite + Tailwind] -- 1. JSON Yükleme / Canlı İstek --> B[FastAPI Backend - Uvicorn]
+    A[React Frontend - Vite + Tailwind] -- 1. JSON Upload / Live Request --> B[FastAPI Backend - Uvicorn]
     B -- 2. Context Injection & System Prompt --> C[NVIDIA NIM API - Llama-3.3-70B]
     C -- 3. Structured JSON Response --> B
-    B -- 4. Güvenli Ayrıştırma / JSON Repair --> B
-    B -- 5. Veritabanı Güncelleme --> D[(SQLite era.db)]
-    B -- 6. Analiz & Öneriler --> A
-    A -- 7. Aksiyonu Uygula / Onayla --> B
-    B -- 8. WMS/ERP Senkronizasyonu & PDF Üretimi --> A
+    B -- 4. Safe Parsing / JSON Repair --> B
+    B -- 5. Database Update --> D[(SQLite era.db)]
+    B -- 6. Analysis & Recommendations --> A
+    A -- 7. Apply / Approve Action --> B
+    B -- 8. WMS/ERP Synchronization & PDF Generation --> A
 ```
 
-### 🛡️ Endüstriyel Seviye Güvenlik Duvarı & Hata Toleransı (Resilience)
-Dil modellerinin uydurma (halüsinasyon) eğilimini ve JSON bozma risklerini minimize etmek için Era arkasında güçlü bir **yazılım mühendisliği savunması** barındırır:
-1. **Strict Prompting:** Sistem promptunda modele sadece doğrulanabilir kurallar enjekte edilir.
-2. **Context Window Limitations:** Şirketin Min/Max envanter kuralları modele sınır parametreleri olarak gönderilir.
-3. **JSON Repairing (`_repair_json`):** Modelden dönen JSON yapısında kaçan virgüller, hatalı parantezler regex algoritmalarıyla otomatik onarılır.
-4. **Resilient Fallback:** NVIDIA API limit aşımı veya internet kesintilerinde deterministik yedek algoritmalar (`_fallback_suggestions` ve `_fallback_insights`) devreye girerek sistemin operasyonel sürekliliğini garanti eder. Çökme yaşanmaz!
+### 🛡️ Industrial-Grade Resilience & Fault Tolerance
+
+To minimize language-model hallucinations and the risk of malformed JSON, Era includes a strong software-engineering defense layer:
+
+1. **Strict Prompting:** Only verifiable rules are injected into the system prompt.
+2. **Context Window Limitations:** The company's minimum/maximum inventory rules are sent to the model as boundary parameters.
+3. **JSON Repairing (`_repair_json`):** Missing commas and malformed brackets in the JSON returned by the model are automatically repaired using regular-expression algorithms.
+4. **Resilient Fallback:** If the NVIDIA API rate limit is exceeded or the internet connection is unavailable, deterministic fallback algorithms (`_fallback_suggestions` and `_fallback_insights`) keep the system operational.
 
 ---
 
-## 📁 Proje Klasör Yapısı (Project Directory)
+## 📁 Project Directory
 
 ```
 .
-├── backend/                  # Python FastAPI API & Servisleri
-│   ├── config.py             # NVIDIA API Key ve Model Yapılandırmaları
-│   ├── main.py               # API Başlangıç Noktası (Uvicorn Server)
-│   ├── middleware.py         # CORS ve Güvenlik Ayarları
-│   ├── schemas.py            # API Pydantic Şemaları
-│   ├── storage.py            # SQLite DB (era.db) Entegrasyonu & CRUD
-│   ├── requirements.txt      # Python Bağımlılıkları
+├── backend/                  # Python FastAPI API & services
+│   ├── config.py             # NVIDIA API key and model configuration
+│   ├── main.py               # API entry point (Uvicorn server)
+│   ├── middleware.py         # CORS and security settings
+│   ├── schemas.py            # API Pydantic schemas
+│   ├── storage.py            # SQLite database (era.db) integration & CRUD
+│   ├── requirements.txt      # Python dependencies
 │   ├── routers/
-│   │   └── operations.py     # Lojistik API Endpoint'leri (/analyze, /apply...)
+│   │   └── operations.py     # Logistics API endpoints (/analyze, /apply...)
 │   └── services/
-│       └── ai_service.py     # NVIDIA NIM API Llama-3 Entegrasyonu & Fallback
+│       └── ai_service.py     # NVIDIA NIM API Llama-3 integration & fallback
 │
 └── frontend/                 # React SPA
-    ├── package.json          # Node Bağımlılıkları
-    ├── tailwind.config.js    # Tailwind Tasarım Ayarları
+    ├── package.json          # Node dependencies
+    ├── tailwind.config.js    # Tailwind design configuration
     └── src/
-        ├── App.jsx           # Orchestration Layer
-        ├── main.jsx          # Giriş Noktası
-        ├── index.css         # CSS & Global Tasarım Token'ları
+        ├── App.jsx           # Orchestration layer
+        ├── main.jsx          # Entry point
+        ├── index.css         # CSS & global design tokens
         ├── pages/
-        │   ├── Landing.jsx   # Premium Karşılama ve Değer Önerisi Sayfası
-        │   └── Dashboard.jsx # Ana Operasyon Kontrol Paneli
+        │   ├── Landing.jsx   # Premium welcome and value proposition page
+        │   └── Dashboard.jsx # Main operations control panel
         ├── components/
-        │   ├── ExecutiveSummary.jsx # KPI ve Verimlilik Kartları
-        │   ├── SuggestionCard.jsx   # AI Önerisi ve Yol Haritası Kartları
-        │   ├── TrainLoading.jsx     # Özelleştirilmiş Tren Animasyon Ekranı
-        │   ├── AiInsightsPanel.jsx  # AI Operasyon Log Paneli
-        │   └── Navbar.jsx           # Premium Navigasyon
+        │   ├── ExecutiveSummary.jsx # KPI and efficiency cards
+        │   ├── SuggestionCard.jsx   # AI recommendation and roadmap cards
+        │   ├── TrainLoading.jsx     # Custom train-loading animation screen
+        │   ├── AiInsightsPanel.jsx  # AI operations log panel
+        │   └── Navbar.jsx           # Premium navigation
         └── features/
             └── copilot/
-                ├── CopilotBrief.jsx # Morning Brief Karşılama Alanı
-                ├── OmniSearchBar.jsx# Doğal Dil Arama Arayüzü
-                └── ProactiveAlert.jsx# Acil Anomali Uyarı Kartları
+                ├── CopilotBrief.jsx # Morning Brief welcome area
+                ├── OmniSearchBar.jsx# Natural-language search interface
+                └── ProactiveAlert.jsx# Urgent anomaly alert cards
 ```
 
 ---
 
-## 🚀 Hızlı Kurulum & Çalıştırma (Quick Start Guide)
+## 🚀 Quick Start Guide
 
-### 📋 Gereksinimler
-* **Python:** v3.10 veya üzeri
-* **Node.js:** v18.0 veya üzeri
-* **NVIDIA NIM API Key:** Lojistik AI analizi için gereklidir (Bulunmadığı takdirde sistem deterministik Fallback modunda demo verileriyle çalışır).
+### 📋 Requirements
+
+* **Python:** v3.10 or later
+* **Node.js:** v18.0 or later
+* **NVIDIA NIM API Key:** Required for logistics AI analysis. If unavailable, the system runs in deterministic fallback mode with demo data.
 
 ---
 
-### 1️⃣ Arka Plan (Backend) Kurulumu
+### 1️⃣ Backend Setup
 
-1. `backend` klasörüne geçiş yapın:
+1. Navigate to the `backend` directory:
    ```bash
    cd backend
    ```
 
-2. Python sanal ortamı oluşturun ve aktif edin:
+2. Create and activate a Python virtual environment:
    ```bash
    python -m venv venv
-   source venv/bin/activate  # macOS/Linux için
-   # veya
-   venv\Scripts\activate     # Windows için
+   source venv/bin/activate  # macOS/Linux
+   # or
+   venv\Scripts\activate     # Windows
    ```
 
-3. Gerekli kütüphaneleri yükleyin:
+3. Install the required packages:
    ```bash
    pip install -r requirements.txt
    ```
 
-4. Çevre değişkenlerini yapılandırın:
-   * `backend/` dizini altındaki `.env.example` dosyasını kopyalayıp adını `.env` yapın.
-   * Dosya içerisine NVIDIA API Key değerinizi ekleyin:
+4. Configure the environment variables:
+   * Copy the `.env.example` file in the `backend/` directory and rename it to `.env`.
+   * Add your NVIDIA API key to the file:
      ```env
      NVIDIA_API_KEY=nvapi-your-real-key-here
      ```
 
-5. Sunucuyu başlatın:
+5. Start the server:
    ```bash
    python main.py
    ```
-   * Backend API şu adreste çalışacaktır: `http://localhost:8000`
-   * API dökümantasyonu (Swagger): `http://localhost:8000/docs`
+   * The backend API will be available at `http://localhost:8000`.
+   * API documentation (Swagger): `http://localhost:8000/docs`
 
 ---
 
-### 2️⃣ Arayüz (Frontend) Kurulumu
+### 2️⃣ Frontend Setup
 
-1. `frontend` klasörüne geçiş yapın:
+1. Navigate to the `frontend` directory:
    ```bash
    cd ../frontend
    ```
 
-2. Gerekli Node modüllerini yükleyin:
+2. Install the required Node modules:
    ```bash
    npm install
    ```
 
-3. Arayüzü geliştirme modunda başlatın:
+3. Start the interface in development mode:
    ```bash
    npm run dev
    ```
-   * Arayüz uygulaması şu adreste çalışacaktır: `http://localhost:5173`
-   * Frontend, backend isteklerini otomatik olarak `/api` proxy'si üzerinden `http://localhost:8000` adresine yönlendirecektir.
+   * The frontend application will be available at `http://localhost:5173`.
+   * The frontend automatically routes backend requests through the `/api` proxy to `http://localhost:8000`.
 
 ---
 
-## 📊 Örnek Veri Şeması (sample-data.json)
+## 📊 Example Data Schema (`sample-data.json`)
 
-Sisteme yükleyip anında analiz başlatabileceğiniz örnek veri yapısı envanter, rotalar ve şirket kurallarını barındıran şu JSON formatındadır:
+The following JSON format contains inventory, routes, and company rules. You can upload it to the system and start an analysis immediately:
 
 ```json
 {
   "stock": [
     {
-      "product_id": "Endüstriyel Yedek Parça",
-      "warehouse": "Erzurum Doğu Deposu",
+      "product_id": "Industrial Spare Part",
+      "warehouse": "Erzurum East Warehouse",
       "qty": 5,
       "daily_demand": 3
     },
     {
-      "product_id": "Tıbbi Malzeme",
-      "warehouse": "İstanbul Merkez Deposu",
+      "product_id": "Medical Supplies",
+      "warehouse": "Istanbul Central Warehouse",
       "qty": 12,
       "daily_demand": 5
     }
@@ -233,25 +244,24 @@ Sisteme yükleyip anında analiz başlatabileceğiniz örnek veri yapısı envan
 
 ---
 
-## 🔮 Gelecek Yol Haritası & Kurumsal Vizyon
+## 🔮 Future Roadmap & Corporate Vision
 
-1. **🤖 Tam Otonom Lojistik Ajanı (Fully Autonomous Agent):**
-   * *Mevcut Yapı:* Human-in-the-loop (İnsan onaylı AI kararı).
-   * *Gelecek Hedefi:* Belirli bir güven skorunun üzerindeki kararları doğrudan PTT Kargo, Yurtiçi Kargo API'leri veya depo WMS API'leri üzerinden hiçbir insan müdahalesi olmadan tetikleme yeteneği.
-2. **📈 İleri Zaman Serisi Entegrasyonları (D4):**
-   * Mevcut envanter kuralları yerine LSTM veya Prophet modelleri entegre edilerek mevsimsel talep tahminlerinin (örn: kış aylarında Erzurum deposundaki parça talebinin artması) yapay zekaya otomatik girdi olarak sunulması.
-3. **🗺️ Canlı GPS & IoT Takibi (D5):**
-   * Rotalardaki taşıtların IoT cihazlarından gelen anlık GPS koordinatlarını işleyerek, rota verimsizliğini statik ortalama saatler üzerinden değil, canlı trafik anomalileri üzerinden tespit etme.
+1. **🤖 Fully Autonomous Logistics Agent:**
+   * *Current architecture:* Human-in-the-loop (human-approved AI decisions).
+   * *Future goal:* Trigger decisions above a defined confidence score directly through PTT Cargo, Yurtiçi Kargo, or warehouse WMS APIs without human intervention.
+2. **📈 Advanced Time-Series Integrations (D4):**
+   * Integrate LSTM or Prophet models instead of relying only on current inventory rules, enabling the AI to account for seasonal demand forecasts (for example, increased spare-part demand at the Erzurum warehouse during winter).
+3. **🗺️ Live GPS & IoT Tracking (D5):**
+   * Process real-time GPS coordinates from IoT devices installed in vehicles, enabling route inefficiencies to be detected through live traffic anomalies instead of static average travel times.
 
 ---
 
-## ⚖️ Lisans
+## ⚖️ License
 
-Bu proje **MIT Lisansı** altında lisanslanmıştır. Daha fazla detay için `LICENSE` dosyasına göz atabilirsiniz.
+This project is licensed under the **MIT License**. See the `LICENSE` file for more details.
 
 ---
 
 <p align="center">
-  <b>Era Platformu</b> — Lojistikte Yapay Zeka ile Geleceği Bugünden Yönetin.
+  <b>Era Platform</b> — Manage the future of logistics with AI, today.
 </p>
-
